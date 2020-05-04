@@ -10,8 +10,10 @@ public class Log {
 
 
 
-    private static final String FILENAME = "logs.log";
+    private static final String FILENAME = "demo.log";
     private static final String FILEPATH = "/Users/nbh/Desktop/logs/";
+
+    //private static final String FILEPATH = "/var/log/tomcat8/";
     private static final String PATH = FILEPATH + FILENAME;
 
     private Log() {
@@ -24,27 +26,6 @@ public class Log {
 
 
 
-//   // oprindelig.
-//    private static void log(Level lvl, String decription, String t) throws Exception {
-//
-//        Logger logger = Logger.getLogger(Log.class.getName());   // alle operationer på logger er thread safe
-//
-//        FileHandler fh = new FileHandler(PATH, true);
-//        fh.setFormatter(new VerySimpleFormatter());
-//        logger.addHandler(fh);
-//
-//        logger.setLevel(Level.INFO);   // her sætter vi niveauet for logningen.
-//
-//        logger.log(lvl ,  decription + " " + t);
-////        logger.log(lvl ,  decription + " " + t.getMessage());
-//
-//        fh.close();
-//
-//    }
-
-
-
-
     private static void log(Level lvl, String decription) throws Exception {
 
         Logger logger = Logger.getLogger(Log.class.getName());   // alle operationer på logger er thread safe
@@ -53,7 +34,7 @@ public class Log {
         fh.setFormatter(new VerySimpleFormatter());
         logger.addHandler(fh);
 
-        logger.setLevel(Level.INFO);   // her sætter vi niveauet for logningen.
+        logger.setLevel(Level.FINEST);   // her sætter vi niveauet for logningen.
 
         logger.log(lvl ,  decription  );
 
@@ -63,20 +44,6 @@ public class Log {
     }
 
 
-
-
-
-
-
-
-// oprindeligt
-//    public static void severe(String description ,Throwable t) {
-//
-//        try {
-//            log(Level.SEVERE,description , t.toString());
-//        } catch (Exception e) {
-//        }
-//    }
 
 
 
@@ -90,28 +57,7 @@ public class Log {
 
 
 
-
-    public static void info(String description ) {
-
-        try {
-            log(Level.INFO,  description );
-        } catch (Exception e) {
-
-        }
-
-    }
-
-
-
-    public static void finest(String description) {
-
-        try {
-            log(Level.FINEST, description  );
-        } catch (Exception e) {
-
-        }
-
-    }
+    
 
 
 }

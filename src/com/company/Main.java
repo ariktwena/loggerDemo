@@ -50,10 +50,11 @@ public class Main {
 
     }
 
-    private static int getInt(String s ) {
+    private static int getInt(String s )  {
 
-        return Integer.parseInt(getString(s));
+        int i = Integer.parseInt(getString(s));
 
+        return i;
     }
 
     private static int  divideBy(int x) {
