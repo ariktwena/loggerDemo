@@ -37,7 +37,7 @@ public class Main {
     }
 
 
-    private static void question(int x) throws Exception {
+    private static void question(int x) {
 
         String []  sokrates  = { "Du ", "Perikles " , "kan ",  "du ", "sige " ,  "mig ",  "- ",    "hvornår " , "smager ",  "en ",  "Tuborg " ,  "bedst? "};
 
