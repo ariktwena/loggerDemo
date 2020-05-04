@@ -16,6 +16,27 @@ public class Main {
 
     }
 
+
+    private static void readFromFile(String filnavn)  {
+
+        File file = new File(filnavn);
+
+        try {
+            Scanner scanner = new Scanner(file);
+
+            while (scanner.hasNext()) {
+
+                System.out.println(scanner.nextLine());
+
+            }
+        } catch (FileNotFoundException e) {
+            Log.severe("fra funktionen readFromFile " + e.getMessage());
+        }
+
+
+    }
+
+
     private static void question(int x) throws Exception {
 
         String []  sokrates  = { "Du ", "Perikles " , "kan ",  "du ", "sige " ,  "mig ",  "- ",    "hvornår " , "smager ",  "en ",  "Tuborg " ,  "bedst? "};
@@ -58,22 +79,5 @@ public class Main {
 
     }
 
-    private static void readFromFile(String filnavn)  {
 
-        File file = new File(filnavn);
-
-        try {
-            Scanner scanner = new Scanner(file);
-
-            while (scanner.hasNext()) {
-
-                System.out.println(scanner.nextLine());
-
-            }
-        } catch (FileNotFoundException e) {
-            Log.severe("fra funktionen læs" + e.getMessage());
-        }
-
-
-    }
 }
