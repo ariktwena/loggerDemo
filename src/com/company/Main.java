@@ -11,11 +11,7 @@ public class Main {
 
 
 
-        try {
-            question(20);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
 
 
     }
@@ -25,17 +21,13 @@ public class Main {
         String []  sokrates  = { "Du ", "Perikles " , "kan ",  "du ", "sige " ,  "mig ",  "- ",    "hvornår " , "smager ",  "en ",  "Tuborg " ,  "bedst? "};
 
 
-        try {
+
             for (int i = 0; i < x; i++) {
 
                 System.out.println(sokrates[i]);
 
             }
-        } catch (Exception e) {
-            Log.severe("fra spørgsmålet " + e);
-            throw new MinFejl("altid Sokraters.... altid");
 
-        }
 
 
     }
